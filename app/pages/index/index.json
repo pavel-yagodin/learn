@@ -35,7 +35,6 @@
 				"title": {
 					"params": {
 						"level": 2
-
 					},
 					"title": "BEM 2 Jade"
 				},
@@ -74,28 +73,16 @@
 										"params": {
 											"type": "element"
 										},
-										"name": "+e.text_color_blue",
-										"blocks": [{
-											"bem": {
-												"params": {},
-												"name": "| Text",
-												"blocks": []
-											}
-										}]
+										"name": "+e.text_color_blue Text",
+										"blocks": []
 									}
 								}, {
 									"bem": {
 										"params": {
 											"type": "element"
 										},
-										"name": "+e.autor._size_large",
-										"blocks": [{
-											"bem": {
-												"params": {},
-												"name": "| Autor",
-												"blocks": []
-											}
-										}]
+										"name": "+e.autor._size_large Autor",
+										"blocks": []
 									}
 								}]
 							}
