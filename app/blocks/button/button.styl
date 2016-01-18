@@ -1,0 +1,42 @@
+.button
+	position relative
+	padding 20px 30px
+	border-radius 5px
+	overflow hidden
+	border none
+	color #fff
+	text-transform uppercase
+
+	&:before
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		background-color rgba(0,0,0,0)
+		content ''
+
+	&__text
+		position relative
+		display inline-block
+		font-size 1.2em
+		line-height 1.25
+		letter-spacing 0.1em
+
+	&:hover:before
+		background-color rgba(0,0,0,0.1)
+
+	&_color_aqua
+		background-color #30bae7
+
+	&_color_orange
+		background-color #eb7d4b
+
+	&_color_green
+		background-color #00cc99
+
+	&_color_blue
+		background-color #3c5499
+
+	&_color_black
+		background-color #333

@@ -1,0 +1,11 @@
+extends /layouts/landing/landing
+
+block head
+	- var pageTitle = 'БЭМ';
+
+block content
+	include /blocks/section/section
+
+	- var pageData = getPages('index/index');
+	each section in pageData.sections
+		+section(section)

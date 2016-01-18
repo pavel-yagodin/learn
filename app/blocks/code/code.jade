@@ -1,0 +1,19 @@
+mixin code(data)
+	- var classes = [];
+	if data.params
+		each name, key in data.params
+			- classes.push('_'+key+'_'+name)
+		if data.params.type
+			- classes.push('js-code')
+	+b.code(class=classes)&attributes(attributes)
+		if block
+			block
+		if data.blocks
+			+e.text=data.name
+			each elem in data.blocks
+				each item, name in elem
+					if name == 'bem'
+						+code(item)
+			if data.close
+				+e.text=data.close
+

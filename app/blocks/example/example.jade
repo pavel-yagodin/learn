@@ -1,0 +1,33 @@
+include /blocks/bem/bem
+include /blocks/code/code
+
+mixin example(data)
+	- var classes = [];
+	if data.params
+		each name, key in data.params
+			- classes.push('_'+key+'_'+name)
+	+b.example.js-example(class=classes)&attributes(attributes)
+		if block
+			block
+		if data.text
+			+e.text!=data.text
+		if data.blocks
+			+e.box
+				each items, name in data.blocks
+					if name == 'bem'
+						+e.view.js-example-target
+							+bem(items)
+
+						+e.code
+							+e.source.js-example-target
+								+code(items)
+							if items.lang
+								+e.lang=items.lang
+
+					if name == 'code'
+						each item in items
+							+e.code
+								+e.source.js-example-target
+									+code(item)
+								if item.lang
+									+e.lang=item.lang
