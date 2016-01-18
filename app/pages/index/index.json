@@ -831,7 +831,8 @@
 				},
 				"blocks": [{
 					"params": {
-						"direction": "row"
+						"direction": "row",
+						"text": "large"
 					},
 					"round": {
 						"params": {
@@ -855,7 +856,8 @@
 					}
 				}, {
 					"params": {
-						"direction": "row"
+						"direction": "row",
+						"text": "large"
 					},
 					"heading": {
 						"params": {
@@ -879,7 +881,8 @@
 					}
 				}, {
 					"params": {
-						"direction": "row"
+						"direction": "row",
+						"text": "large"
 					},
 					"round": {
 						"params": {
