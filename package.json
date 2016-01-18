@@ -16,7 +16,7 @@
     "build": "npm run clean && gulp build",
     "lint": "gulp lint",
     "deploy": "npm run clean && gulp build && gulp deploy",
-    "clean": "rm -rf dist/* & find app/styles/sprites/* ! -name 'keep.styl' -delete",
+    "clean": "rm -rf dist/*",
     "zip": "npm run clean && gulp zip",
     "patch": "gulp patch",
     "minor": "gulp minor",
