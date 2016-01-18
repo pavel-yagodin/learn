@@ -1,7 +1,7 @@
 {
-  "name": "csssr-project-template",
+  "name": "learn",
   "version": "0.13.0",
-  "description": "A template for a quick start.",
+  "description": "Learn project",
   "keywords": [
     "csssr",
     "project",
@@ -24,17 +24,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh@github.com:CSSSR/csssr-project-template.git"
+    "url": "git+ssh@github.com:pavel-yagodin/learn"
   },
-  "author": "Felix Exter <felixexter@ya.ru> (https://github.com/felixexter)",
-  "contributors": [
-    "Aleksandr Petrov <dzhiriki@gmail.com> (https://github.com/dzhiriki)"
-  ],
+  "author": "Pavel-Yagodin <pavel-yagodin@gmail.com> (https://github.com/pavel-yagodin)",
   "bugs": {
-    "url": "https://github.com/CSSSR/csssr-project-template/issues/",
+    "url": "https://github.com/pavel-yagodin/learn/issues/",
     "email": "cpt@csssr.com"
   },
-  "homepage": "https://github.com/CSSSR/csssr-project-template/",
+  "homepage": "https://github.com/pavel-yagodin/learn/",
   "engines": {
     "node": ">=5.1.0"
   },
