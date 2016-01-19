@@ -1,47 +1,121 @@
 .code
 	position relative
-	color inherit
-	text-align left
-	margin-left 5px
-	line-height 1.2
-	padding 3px
+	width 100%
+	text-align right
+	display flex
+	align-items stretch
+	font-family Courier
+	padding-top 16px
 
-	&:before
-		position absolute
-		top 0
-		left 0
-		right 0
-		bottom 0
-		border-radius 3px
-		border 2px none transparent
+	&__souce
+		position relative
+		width 100%
+		border-radius 5px
+		padding 10px 10px 25px
+		background-color #272822
+		color #F8F8F2
+		text-align left
 		z-index 1
-		content ''
 
-	&:hover:before
-	&_state_hover:before
-		border-color currentColor
-
-	&_type_block:before
-		border-style solid
-
-	&_type_element:before
-		border-style dotted
-
-	&_color_orange
-		color #eb7d4b
-
-	&_color_green
-		color #00cc99
-
-	&_color_blue
-		color #333366
-
-	&_color_purple
-		color #87509c
-
-	&_color_black
-		color #333
+	&__lang
+		position absolute
+		display block
+		top 0
+		right 10px
+		background-color #373832
+		border-radius 5px
+		padding 4px 8px
+		color #F92672
+		z-index 2
 
 
+	&__line
+		position relative
+		padding-left 15px
+		white-space nowrap
 
+		&_type_content
+			white-space normal
 
+		&_type_part:after
+			position absolute
+			left 5px
+			width 5px
+			top 5px
+			bottom 4px
+			background-color currentColor
+			opacity 0
+			content ''
+
+		&_state_hover:after
+			opacity 1
+
+		&_type_element&_state_hover:after
+			opacity .5
+
+		&_color_orange:after
+			color #eb7d4b
+		&_color_green:after
+			color #00cc99
+		&_color_blue:after
+			color #333366
+		&_color_purple:after
+			color #87509c
+		&_color_black:after
+			color #333
+
+		&_type_close
+			padding-left 0
+
+		for level in (0..10)
+			&_level_{level}
+				&:before
+					position absolute
+					left (level ) * -15px
+					right -10px
+					top 0
+					bottom 0
+					border-top 1px solid rgba(255,255,255,.05)
+					content ''
+		&_level_0
+			padding-right 10px
+		&_level_0:before
+			right 0
+			border-bottom 1px solid rgba(255,255,255,.05)
+
+	&__highlight
+		&_html
+			&_tag
+				color #F92672
+			&_key
+				color #A6E22E
+			&_value
+				color #E6DB74
+			&_content
+				color #F2F2F2
+
+		&_jade
+			&_tag
+				color #F92672
+			&_key
+				color #A6E22E
+			&_value
+				color #E6DB74
+			&_class
+				color #AE81FF
+			&_content
+				color #F2F2F2
+
+		&_bemto
+			&_type
+				color #A6E22E
+			&_tag
+				color #E6DB74
+			&_key
+				color #A6E22E
+			&_value
+				color #E6DB74
+			&_class
+				color #AE81FF
+			&_content
+				color #F2F2F2

@@ -1,0 +1,42 @@
+include /blocks/section/section
+
+include /blocks/heading/heading
+include /blocks/title/title
+include /blocks/description/description
+include /blocks/round/round
+
+include /blocks/features/features
+include /blocks/feature/feature
+
++section._color_green
+	+heading
+		+e.title
+			+title Основные этапы разработки
+		+e.description
+			+description
+				| БЭМ-методология затрагивает все этапы, чтобы оптимизировать
+				| скорость и качество разработки, мы предлагаем такой порядок
+				| разработкиЗнать БЭМ-методологию обязан каждый уважающий себя
+				| верстальщик
+
+	+features
+		+feature
+			+round('analytics')._background_orange._color_white
+			+e.box
+				+title(3) Анализ
+				+text Схематически разделить страницу на логические блоки и их элементы
+		+feature
+			+round('source')._background_orange._color_white
+			+e.box
+				+title(3) Разметка
+				+text Пишем разметку для уже разделенных блоков и добавляем их на страницу
+		+feature
+			+round('style')._background_orange._color_white
+			+e.box
+				+title(3) Стилизация
+				+text Позиционируем блоки, наводим Pixel Perfect и закладываем анимации
+		+feature
+			+round('logic')._background_orange._color_white
+			+e.box
+				+title(3) Логика
+				+text Заставляем верстку работать, добавив в блоки магию JavaScript

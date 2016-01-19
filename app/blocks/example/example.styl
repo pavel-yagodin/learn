@@ -1,46 +1,108 @@
 .example
 	position relative
-	padding 10px
-	border-radius 10px
+	display flex
+	width 100%
+	padding-top 16px
+	text-align left
+
+
+	&__name
+		position absolute
+		display block
+		top 0
+		right 10px
+		font-family Courier
+		background-color #eee
+		border-radius 5px
+		padding 4px 8px
+		color #F92672
+		z-index 2
+
+	&__frame
+		width 100%
+		padding 20px
+		border-radius 10px
+		background-color #fafafa
+		display flex
+		align-items center
+		justify-content center
+
+	&__element
+		position relative
+		padding 8px
+
+		&:before
+			position absolute
+			top 0
+			left 0
+			right 0
+			bottom 0
+			opacity 0
+			border 5px solid currentColor
+			content ''
+			z-index 0
+
+		&_state_hover:before
+			opacity 1
+
+		&_type_element&_state_hover:before
+			opacity .5
+
+		&_color_orange:before
+			border-color #eb7d4b
+		&_color_green:before
+			border-color #00cc99
+		&_color_blue:before
+			border-color #333366
+		&_color_purple:before
+			border-color #87509c
+		&_color_black:before
+			border-color #333
+
+
+.example-review
+	display flex
+	max-width 480px
+	align-items flex-start
+
+	&__photo
+		display block
+		height 100px
+		height 100px
+		border-radius 50%
+
+	&__quote
+		margin-left 10px
 
 	&__text
-		color #333366
-		padding-bottom 10px
-
-		& b
-			font-weight bold
-		& i
-			font-style italic
-
-	&__box
-		display flex
-		justify-content space-between
-		align-items flex-start
-
-	&__source
-		padding 5px 5px 5px 0px
-		background-color rgba(0,0,0,.03)
-
-	&__view
-		padding 5px 0
-
-	&__view
-	&__code
-		&:not(:last-child)
-			margin-right 10px
-
-	&_color_white
-		background-color #fff
-
-	&__lang
-		float right
-		margin-top -9px
-		margin-right 6px
-		display inline-block
-		text-align right
-		padding 0 5px
-		font-size 0.75em
-		font-weight bold
+		font-size 1em
 		font-style italic
-		background-color rgba(0,0,0,.7)
-		color #fff
+
+	&__autor
+		font-size 1.25em
+		text-transform uppercase
+		font-weight bold
+
+	&_view_reverse
+		flex-direction row-reverse
+		text-align right
+
+	&_view_reverse &__quote
+		margin-left 0px
+		margin-right 10px
+
+	&_view_columns
+		max-width 300px
+		flex-direction column
+		align-items center
+		text-align center
+
+	&_view_columns &__quote
+		margin-left 0px
+
+.example-reviews
+	display flex
+	flex-direction column
+
+	&__item:not(:last-child)
+		margin-bottom 20px

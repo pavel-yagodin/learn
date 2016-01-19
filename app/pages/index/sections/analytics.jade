@@ -1,0 +1,22 @@
+include /../node_modules/bemto.jade/bemto.jade
+include /blocks/section/section
+
+include /blocks/heading/heading
+include /blocks/title/title
+include /blocks/description/description
+include /blocks/round/round
+
+include /blocks/button/button
+
+
++section._color_light._align_middle
+	+heading
+		+title Анализ задачи, макета и логики
+		+description
+			| На данном этапе мы выделяем будущие блоки и их элементы.
+			br
+			| Разбивая макеты на блоки важно помнить несколько простых правил,
+			| соблюдая их мы получим гибкую и отзывчивую верстку.
+	+round('analytics')._size_large
+
+

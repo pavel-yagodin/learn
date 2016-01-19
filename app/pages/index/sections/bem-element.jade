@@ -1,0 +1,59 @@
+include /../node_modules/bemto.jade/bemto.jade
+
+include /blocks/section/section
+include /blocks/heading/heading
+include /blocks/title/title
+include /blocks/description/description
+
+include /blocks/box/box
+include /blocks/text/text
+
+include /blocks/flex/flex
+include /blocks/example/example
+include /blocks/code/code
+
+
++section._color_purple
+	+heading
+		+e.title
+			+title Элемент
+		+e.description
+			+description
+				| Часть которая не&nbsp;может существовать вне контекста
+				| блока. Наличие элементов добавляет возможность изменять
+				| структуру блока, элементы можно поменять местами, удалить
+				| или добавить. Иногда нужны для позиционирования вложенных блоков.
+
+	+box
+		+e.item
+			| Представлен блок
+			=' '
+			+text('b')._weight_bold +b.review
+			=' '
+			| с несколькими элементами.
+			br
+			+text('b')._weight_bold +e.photo
+			=' '
+			| - фотография пользователя,
+			=' '
+			+text('b')._weight_bold +e.quote
+			=' '
+			| - дополнительный элемент выравнивания,
+			br
+			+text('b')._weight_bold +e.text
+			=' и '
+			+text('b')._weight_bold +e.autor
+			=' '
+			| - соответственно текст и автор отзыва.
+
+		+flex._cols_2.js-selection
+			+e.item_ghow_1
+				+example({
+					json: getBlock('example/review')
+				})
+			+e.item_ghow_1
+				+code({
+					lang: 'bemto',
+					json: getBlock('example/review')
+				})
+

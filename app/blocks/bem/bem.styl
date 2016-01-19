@@ -14,25 +14,33 @@
 		border-color currentColor
 
 	&_type_block
-		border-style solid
-
 	&_type_element
-		border-style dotted
+		border-style solid
 
 	&_color_orange
 		color #eb7d4b
+	&_color_orange &_type_element
+		color lighten(#eb7d4b, 50%)
 
 	&_color_green
 		color #00cc99
+	&_color_green &_type_element
+		color lighten(#00cc99, 50%)
 
 	&_color_blue
 		color #333366
+	&_color_blue &_type_element
+		color lighten(#333366, 50%)
 
 	&_color_purple
 		color #87509c
+	&_color_purple &_type_element
+		color lighten(#87509c, 50%)
 
 	&_color_black
 		color #333
+	&_color_black &_type_element
+		color lighten(#333, 50%)
 
 	&_display_columns
 		display flex

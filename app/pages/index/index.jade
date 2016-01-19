@@ -4,8 +4,11 @@ block head
 	- var pageTitle = 'БЭМ';
 
 block content
-	include /blocks/section/section
 
-	- var pageData = getPages('index/index');
-	each section in pageData.sections
-		+section(section)
+	include sections/intro
+	include sections/bemto
+	include sections/bem-block
+	include sections/bem-element
+	include sections/bem-modificator
+	include sections/steps
+	include sections/analytics

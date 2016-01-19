@@ -1,21 +1,6 @@
 include /blocks/heading/heading
 
 mixin feature(data)
-	- var classes = [];
-	if data.params
-		each name, key in data.params
-			- classes.push('_'+key+'_'+name)
-	+b.feature(class=classes)&attributes(attributes)
-		if block
-			block
-		else
-			each item, name in data
-				if name == 'round'
-					+round(item)
-				if name == 'title'
-					+e.title!=data.title
-				if name == 'description'
-					+e.description!=data.description
-				if name == 'heading'
-					+e.heading
-						+heading(data.heading)
+	+b.feature&attributes(attributes)
+		//- +e.box
+		block

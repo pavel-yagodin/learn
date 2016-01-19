@@ -1,0 +1,23 @@
+[{
+	"block": "review",
+	"color": "green",
+	"mods": {
+		"view": "columns"
+	},
+	"clild": [{
+		"tag": "img",
+		"element": "photo",
+		"attrs": {
+			"src": "photo.jpg"
+		}
+	}, {
+		"element": "quote",
+		"clild": [{
+			"element": "text",
+			"content": "Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить работу без него."
+		}, {
+			"element": "autor",
+			"content": "Валерия Иванова"
+		}]
+	}]
+}]

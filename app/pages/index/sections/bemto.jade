@@ -1,0 +1,50 @@
+include /blocks/section/section
+include /blocks/heading/heading
+include /blocks/title/title
+include /blocks/description/description
+
+include /blocks/box/box
+include /blocks/slider/slider
+include /blocks/flex/flex
+include /blocks/example/example
+include /blocks/code/code
+
+
++section._color_blue
+	+heading
+		+e.title
+			+title BEM 2 Jade
+		+e.description
+			+description
+				| Чтобы избежать дублирования класса блока для каждого элемента
+				| и&nbsp;модификатора рекомендуем практичный набор миксинов для
+				| джейда - bemto, он&nbsp;добавлен по&nbsp;умолчанию в&nbsp;нашем
+				| шаблоне. Использование позволит увеличить вашу скорость работы.
+
+	+box.js-selection
+		+e.item
+			| Наглядный пример его эффективности и работы.
+
+		+e.item
+			+flex._cols_2
+				+e.item_ghow_1
+					+example({
+						json: getBlock('example/review')
+					})
+				+e.item_ghow_1
+					+code({
+						lang: 'bemto',
+						json: getBlock('example/review')
+					})
+		+e.item
+			+flex._cols_2
+				+e.item_ghow_1
+					+code({
+						lang: 'jade',
+						json: getBlock('example/review')
+					})
+				+e.item_ghow_1
+					+code({
+						lang: 'html',
+						json: getBlock('example/review')
+					})

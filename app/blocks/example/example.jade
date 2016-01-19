@@ -1,33 +1,68 @@
-include /blocks/bem/bem
-include /blocks/code/code
-
 mixin example(data)
-	- var classes = [];
-	if data.params
-		each name, key in data.params
-			- classes.push('_'+key+'_'+name)
-	+b.example.js-example(class=classes)&attributes(attributes)
-		if block
-			block
-		if data.text
-			+e.text!=data.text
-		if data.blocks
-			+e.box
-				each items, name in data.blocks
-					if name == 'bem'
-						+e.view.js-example-target
-							+bem(items)
+	+b.example.js-selection-connect&attributes(attributes)
+		+e.name frame
 
-						+e.code
-							+e.source.js-example-target
-								+code(items)
-							if items.lang
-								+e.lang=items.lang
+		+e.frame
+			+example-block(data.json)
 
-					if name == 'code'
-						each item in items
-							+e.code
-								+e.source.js-example-target
-									+code(item)
-								if item.lang
-									+e.lang=item.lang
+mixin example-block(items, ways, blockName, blockColor)
+	each item, key in items
+		- item.block = item.block || blockName;
+		- item.color = item.color || blockColor;
+		- item.attrs = item.attrs || {};
+		- var tagName = item.tag || 'div';
+
+		if item.block
+			if ways
+				- ways += ' / ';
+			else
+				- ways = '';
+			- ways += key+'.' + item.block;
+			if item.element
+				- ways += '.'+ item.element;
+
+			if tagName != 'img'
+				- item.attrs['data-way'] = ways;
+
+		if tagName === 'img' && item.attrs.src
+			- item.attrs.src = '/assets/images/example/'+item.attrs.src;
+		- var classes = [];
+		- var classesExample = [];
+
+		if !item.element
+			- classes.push('example-'+item.block)
+		else
+			- classes.push(item.element)
+
+		if item.mods
+			each mod, key in item.mods
+				- classes.push('_'+key+'_'+mod)
+
+		- classesExample.push('example__element')
+		if item.element
+			- classesExample.push('example__element_type_element')
+		- classesExample.push('example__element_color_'+item.color)
+
+		- classesExample.push('js-selection-example')
+
+		if !item.element
+			+b(tagName)(class=[classes, classesExample])&attributes(item.attrs)
+				if item.content
+					!=item.content
+
+				if item.clild
+					+example-block(item.clild, ways, item.block, item.color)
+
+		if item.element
+			if tagName === 'img'
+				- var attrs = {};
+				- attrs['data-way'] = ways;
+				div(class=classesExample)&attributes(attrs)
+					- classes.push('js-selection-example')
+					+e(tagName)(class=classes)&attributes(item.attrs)
+			else
+				+e(tagName)(class=[classes, classesExample])&attributes(item.attrs)
+					if item.content
+						!=item.content
+					if item.clild
+						+example-block(item.clild, ways, item.block, item.color)

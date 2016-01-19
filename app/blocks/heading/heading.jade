@@ -1,22 +1,6 @@
-include /blocks/title/title
-include /blocks/separator/separator
-include /blocks/description/description
-
 mixin heading(data)
-	- var classes = [];
-	if data.params
-		each name, key in data.params
-			- classes.push('_'+key+'_'+name)
-	+b.heading(class=classes)&attributes(attributes)
-		if block
-			block
-		else
-			each item, name in data
-				if name == 'title'
-					+title(item)
-				if name == 'separator'
-					+e.separator
-						+separator
-				if name == 'description'
-					+e.description
-						+description!=data.description
+	+b.heading&attributes(attributes)
+		//- +e.title
+		//- +e.description
+		block
+

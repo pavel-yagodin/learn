@@ -1,0 +1,60 @@
+include /../node_modules/bemto.jade/bemto.jade
+
+include /blocks/section/section
+include /blocks/heading/heading
+include /blocks/title/title
+include /blocks/description/description
+
+include /blocks/box/box
+include /blocks/text/text
+include /blocks/flex/flex
+include /blocks/example/example
+include /blocks/code/code
+
+
++section._color_green
+	+heading
+		+e.title
+			+title Блок
+		+e.description
+			+description
+				| Независимая логическая единица. Доступна возможность повторного
+				| использования без дополнительной доработки.
+
+	+box
+		+e.item
+			| В данном примере два блока
+			=' '
+			+text('b')._weight_bold +b.reviews
+			=' '
+			| (список отзывов) и
+			=' '
+			+text('b')._weight_bold +b.review
+			=' '
+			| (сам отзыв).
+			br
+			| При этом
+			=' '
+			+text('b')._weight_bold +b.review
+			=' '
+			| вложен в элемент
+			=' '
+			+text('b')._weight_bold +e.item
+			=' '
+			| блока
+			=' '
+			+text('b')._weight_bold +b.reviews
+			=' '
+			| для контроля над его положением.
+
+		+flex._cols_2.js-selection
+			+e.item_ghow_1
+				+example({
+					json: getBlock('example/reviews')
+				})
+
+			+e.item_ghow_1
+				+code({
+					lang: 'bemto',
+					json: getBlock('example/reviews')
+				})

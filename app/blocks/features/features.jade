@@ -1,13 +1,3 @@
-include /blocks/feature/feature
-
-mixin features(data)
-	- var classes = [];
-	if data.params
-		each name, key in data.params
-			- classes.push('_'+key+'_'+name)
-	+b.features(class=classes)&attributes(attributes)
-		if block
-			block
-		if data.blocks
-			each item in data.blocks
-				+feature(item)
+mixin features()
+	+b.features&attributes(attributes)
+		block

@@ -1,0 +1,54 @@
+include /blocks/section/section
+include /blocks/heading/heading
+include /blocks/title/title
+include /blocks/description/description
+
+include /blocks/box/box
+include /blocks/text/text
+include /blocks/flex/flex
+include /blocks/example/example
+include /blocks/code/code
+
+
++section._color_blue
+	+heading
+		+e.title
+			+title Модификатор
+		+e.description
+			+description
+				| Опциональный параметр, определяющий внешний вид блока или элемента.
+				| Используя модификаторы можно получить бесконечное количество вариаций
+				| отображения. Модификация может быть любой: цвет фона и текста; состояние
+				| и размеры элементов; И так дальше...
+
+	+box.js-selection
+		+e.item
+			='В данном примере блок '
+			+text('b')._weight_bold +b.review
+			=' изменяет свой вид при помощи модификатора '
+			+text('b')._weight_bold._style_italic _view_rows
+			='.'
+		+e.item
+			+flex._cols_2
+				+e.item_ghow_1
+					+example({
+						json: getBlock('example/reviews_view_rows')
+					})
+
+				+e.item_ghow_1
+					+code({
+						lang: 'bemto',
+						json: getBlock('example/reviews_view_rows')
+					})
+		+e.item
+			+flex._cols_2
+				+e.item_ghow_1
+					+example({
+						json: getBlock('example/review_view_reverse')
+					})
+
+				+e.item_ghow_1
+					+code({
+						lang: 'bemto',
+						json: getBlock('example/review_view_reverse')
+					})

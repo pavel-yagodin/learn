@@ -1,19 +1,150 @@
 mixin code(data)
-	- var classes = [];
-	if data.params
-		each name, key in data.params
-			- classes.push('_'+key+'_'+name)
-		if data.params.type
-			- classes.push('js-code')
-	+b.code(class=classes)&attributes(attributes)
-		if block
-			block
-		if data.blocks
-			+e.text=data.name
-			each elem in data.blocks
-				each item, name in elem
-					if name == 'bem'
-						+code(item)
-			if data.close
-				+e.text=data.close
+	+b.code.js-selection-connect&attributes(attributes)
+		if data.lang
+			+e.lang=data.lang
+
+		+e.souce
+			+code-line(data.json, data.lang, 0)
+
+
+mixin code-line(items, lang, level, ways, blockName, blockColor)
+	each item, key in items
+		- item.block = item.block || blockName;
+		- item.color = item.color || blockColor;
+		- var tagName = item.tag || 'div';
+
+		if item.block
+			if ways
+				- ways += ' / ';
+			else
+				- ways = '';
+			- ways += key+'.' + item.block;
+			if item.element
+				- ways += '.'+ item.element;
+
+			- var attrs = {};
+			- attrs['data-way'] = ways;
+
+		- var classes = [];
+		- classes.push('_level_'+level)
+		- classes.push('_color_'+item.color)
+		if item.element
+			- classes.push('_type_element')
+
+		+e.line_type_part.js-selection-code(class=classes)&attributes(attrs)
+			if lang == 'bemto'
+				+code-highlight(lang, 'type')
+					='+'
+					=item.element?'e':'b'
+
+				if item.tag
+					='('
+					+code-highlight(lang, 'tag')='\''+item.tag+'\''
+					=')'
+
+				+code-highlight(lang, 'class')
+					='.'
+					=item.element?item.element:item.block
+					if item.mods
+						- var i = 0;
+						each mod, key in item.mods
+							=i===0?'_':'._'
+							=key+'_'+mod
+							- i++;
+
+				if item.attrs
+					='('
+					- var i = 0;
+					each attr, key in item.attrs
+						=i===0?'':' '
+						+code-highlight(lang, 'key')=key
+						='='
+						+code-highlight(lang, 'value')='\''+attr+'\''
+						- i++;
+					=')'
+
+				if item.content
+					+e.line_type_content(class='_level_'+(level+1))
+						+code-highlight(lang, 'content')!='| '+item.content
+
+
+			if lang == 'jade'
+				if item.tag
+					+code-highlight(lang, 'tag')=item.tag
+				+code-highlight(lang, 'class')
+					- var el = '.'
+					- el += item.block
+					if item.element
+						- el += '__'+item.element
+					=el
+
+					if item.mods
+						each mod, key in item.mods
+							=el+'_'+key+'_'+mod
+
+				if item.attrs
+					='('
+					- var i = 0;
+					each attr, key in item.attrs
+						=i===0?'':' '
+						+code-highlight(lang, 'key')=key
+						='= '
+						+code-highlight(lang, 'value')='\''+attr+'\''
+						- i++;
+					=')'
+
+				if item.content
+					+e.line_type_content(class='_level_'+(level+1))
+						+code-highlight(lang, 'content')!='| '+item.content
+
+			if lang == 'html'
+				- var el = item.block
+
+				if item.element
+					- el += '__'+item.element
+				if item.tag
+					if ['img'].indexOf(item.tag) > -1
+						- close = '';
+
+				='<'
+				+code-highlight(lang, 'tag')=tagName
+				=' '
+				+code-highlight(lang, 'key')='class'
+				='='
+				+code-highlight(lang, 'value')
+					='\''+el
+					if item.mods
+						each mod, key in item.mods
+							=' '+el+'_'+key+'_'+mod
+					='\''
+
+				if item.attrs
+					- var i = 0;
+					each attr, key in item.attrs
+						=' '
+						+code-highlight(lang, 'key')=key
+						='='
+						+code-highlight(lang, 'value')='\''+attr+'\''
+						- i++;
+
+				='>'
+
+				if item.content
+					+e.line_type_content(class='_level_'+(level+1))
+						+code-highlight(lang, 'content')!=item.content
+
+
+			if item.clild
+				+code-line(item.clild, lang, level + 1, ways, item.block, item.color)
+
+			if lang == 'html'
+				if ['img'].indexOf(item.tag) === -1
+					+e.line_type_close(class='_level_'+(level+1))
+						='</'
+						+code-highlight(lang, 'tag')=tagName
+						='>'
+
+mixin code-highlight(lang, mod)
+	+e('span').highlight(class='_'+lang+'_'+mod)
+		block
 
