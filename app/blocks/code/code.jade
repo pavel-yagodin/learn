@@ -1,7 +1,7 @@
 mixin code(data)
 	+b.code.js-selection-connect&attributes(attributes)
 		if data.lang
-			+e.lang=data.lang
+			+e.lang=data.lang=='bemto'?'jade + bemto':data.lang
 
 		+e.souce
 			+code-line(data.json, data.lang, 0)
