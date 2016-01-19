@@ -42,206 +42,179 @@
 		<title>БЭМ</title>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
-		<link href="assets/styles/app.min.css?t=1453112024950" rel="stylesheet">
+		<link href="assets/styles/app.min.css?t=1453211687724" rel="stylesheet">
 	</head>
 
 	<body class="landing">
-		<section class="section section_color_yellow">
+		<section class="section section_color_light">
 			<div class="section__wrapper">
 				<div class="heading">
-					<h1 class="title title_level_1">Знать БЭМ-методологию обязан каждый уважающий себя верстальщик</h1>
+					<div class="heading__title">
+						<h1 class="title title_level_1">БЭМ</h1>
+					</div>
+					<div class="heading__description">
+						<div class="description description_size_large">Знать БЭМ-методологию обязан каждый уважающий себя верстальщик!</div>
+					</div>
 				</div>
-				<div class="round round_color_black round_size_large">
+				<div class="round round_size_large">
 					<svg class="round__image">
-						<use xlink:href="assets/images/icon.svg#icon_yuranchik"></use>
+						<use xlink:href="assets/images/icon.svg#icon_bem"></use>
 					</svg>
 				</div>
-				<button class="button button_color_green"><span class="button__text">Я хочу знать больше!</span>
+				<button class="button button_color_aqua"><span class="button__text">Я хочу знать больше!</span>
 				</button>
 			</div>
 		</section>
 		<section class="section section_color_blue">
 			<div class="section__wrapper">
 				<div class="heading">
-					<h2 class="title title_level_2">BEM 2 Jade</h2>
-					<div class="heading__separator">
-						<div class="separator"></div>
+					<div class="heading__title">
+						<h2 class="title title_level_2">BEM 2 Jade</h2>
 					</div>
 					<div class="heading__description">
-						<div class="description">Чтобы избежать дублирования класса блока для каждого элемента и&nbsp;модификатора рекомендуем практичный препроцесор bemto, он&nbsp;установлен по&nbsp;умолчанию в&nbsp;нашем шаблоне.
-							<br>Использование позволит увеличить вашу скорость работы.</div>
+						<div class="description">Чтобы избежать дублирования класса блока для каждого элемента и&nbsp;модификатора рекомендуем практичный набор миксинов для джейда - bemto, он&nbsp;добавлен по&nbsp;умолчанию в&nbsp;нашем шаблоне. Использование позволит увеличить вашу скорость работы.</div>
 					</div>
 				</div>
-				<div class="example example_color_white js-example">
-					<div class="example__text">Наглядный пример его эффективности и&nbsp;работы.</div>
-					<div class="example__box">
-						<div class="example__code">
-							<div class="example__source js-example-target">
-								<div class="code code_color_blue code_type_block js-code">
-									<div class="code__text">+b('article').review</div>
-									<div class="code code_type_element js-code">
-										<div class="code__text">+e('img').photo(src='photo.png')</div>
-									</div>
-									<div class="code code_type_element js-code">
-										<div class="code__text">+e.quote</div>
-										<div class="code code_type_element js-code">
-											<div class="code__text">+e.text_color_blue Text</div>
-										</div>
-										<div class="code code_type_element js-code">
-											<div class="code__text">+e.autor._size_large Autor</div>
+				<div class="box js-selection">
+					<div class="box__item">Наглядный пример его эффективности и работы.</div>
+					<div class="box__item">
+						<div class="flex flex_cols_2">
+							<div class="flex__item flex__item_ghow_1">
+								<div class="example js-selection-connect">
+									<div class="example__name">frame</div>
+									<div class="example__frame">
+										<div class="example-review example__element example__element_color_green js-selection-example" data-way="0.review">
+											<div class="example__element example__element_type_element example__element_color_green js-selection-example" data-way="0.review / 0.review.photo">
+												<img class="example-review__photo js-selection-example" src="/assets/images/example/photo.jpg" alt="">
+											</div>
+											<div class="example-review__quote example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.review / 0.review.photo / 1.review.quote">
+												<div class="example-review__text example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text">Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить работу без него.</div>
+												<div class="example-review__autor example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text / 1.review.autor">Валерия Иванова</div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="example__lang">Jade + bemto</div>
+							<div class="flex__item flex__item_ghow_1">
+								<div class="code js-selection-connect">
+									<div class="code__lang">bemto</div>
+									<div class="code__souce">
+										<div class="code__line code__line_color_green code__line_level_0 code__line_type_part js-selection-code" data-way="0.review"><span class="code__highlight code__highlight_bemto_type">+b</span><span class="code__highlight code__highlight_bemto_class">.review</span>
+											<div class="code__line code__line_color_green code__line_level_1 code__line_type_element code__line_type_part js-selection-code"
+											data-way="0.review / 0.review.photo"><span class="code__highlight code__highlight_bemto_type">+e</span>(<span class="code__highlight code__highlight_bemto_tag">'img'</span>)<span class="code__highlight code__highlight_bemto_class">.photo</span>(<span class="code__highlight code__highlight_bemto_key">src</span>=
+												<span
+												class="code__highlight code__highlight_bemto_value">'photo.jpg'</span>)</div>
+											<div class="code__line code__line_color_green code__line_level_1 code__line_type_element code__line_type_part js-selection-code" data-way="0.review / 0.review.photo / 1.review.quote"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.quote</span>
+												<div class="code__line code__line_color_green code__line_level_2 code__line_type_element code__line_type_part js-selection-code"
+												data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.text</span>
+													<div class="code__line code__line_level_3 code__line_type_content"><span class="code__highlight code__highlight_bemto_content">| Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить работу без него.</span>
+													</div>
+												</div>
+												<div class="code__line code__line_color_green code__line_level_2 code__line_type_element code__line_type_part js-selection-code" data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text / 1.review.autor"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.autor</span>
+													<div class="code__line code__line_level_3 code__line_type_content"><span class="code__highlight code__highlight_bemto_content">| Валерия Иванова</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="example__code">
-							<div class="example__source js-example-target">
-								<div class="code code_color_blue code_type_block js-code">
-									<div class="code__text">article.review</div>
-									<div class="code code_type_element js-code">
-										<div class="code__text">img.review__photo(src='photo.png')</div>
-									</div>
-									<div class="code code_type_element js-code">
-										<div class="code__text">.review__quote</div>
-										<div class="code code_type_element js-code">
-											<div class="code__text">.review__text.review__text_color_blue</div>
-											<div class="code">
-												<div class="code__text">| Text</div>
-											</div>
-										</div>
-										<div class="code code_type_element js-code">
-											<div class="code__text">.review__autor.review__autor_size_large</div>
-											<div class="code">
-												<div class="code__text">| Autor</div>
-											</div>
+					</div>
+					<div class="box__item">
+						<div class="flex flex_cols_2">
+							<div class="flex__item flex__item_ghow_1">
+								<div class="code js-selection-connect">
+									<div class="code__lang">jade</div>
+									<div class="code__souce">
+										<div class="code__line code__line_color_green code__line_level_0 code__line_type_part js-selection-code" data-way="0.review"><span class="code__highlight code__highlight_jade_class">.review</span>
+											<div class="code__line code__line_color_green code__line_level_1 code__line_type_element code__line_type_part js-selection-code" data-way="0.review / 0.review.photo"><span class="code__highlight code__highlight_jade_tag">img</span><span class="code__highlight code__highlight_jade_class">.review__photo</span>(<span class="code__highlight code__highlight_jade_key">src</span>= <span class="code__highlight code__highlight_jade_value">'photo.jpg'</span>)</div>
+											<div
+											class="code__line code__line_color_green code__line_level_1 code__line_type_element code__line_type_part js-selection-code" data-way="0.review / 0.review.photo / 1.review.quote"><span class="code__highlight code__highlight_jade_class">.review__quote</span>
+												<div class="code__line code__line_color_green code__line_level_2 code__line_type_element code__line_type_part js-selection-code" data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text"><span class="code__highlight code__highlight_jade_class">.review__text</span>
+													<div class="code__line code__line_level_3 code__line_type_content"><span class="code__highlight code__highlight_jade_content">| Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить работу без него.</span>
+													</div>
+												</div>
+												<div class="code__line code__line_color_green code__line_level_2 code__line_type_element code__line_type_part js-selection-code" data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text / 1.review.autor"><span class="code__highlight code__highlight_jade_class">.review__autor</span>
+													<div class="code__line code__line_level_3 code__line_type_content"><span class="code__highlight code__highlight_jade_content">| Валерия Иванова</span>
+													</div>
+												</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="example__lang">Jade</div>
 						</div>
-						<div class="example__code">
-							<div class="example__source js-example-target">
-								<div class="code code_color_blue code_type_block js-code">
-									<div class="code__text">&lt;article class='review'&gt;</div>
-									<div class="code code_type_element js-code">
-										<div class="code__text">&lt;img class='review__photo' src='photo.png'&gt;</div>
-									</div>
-									<div class="code code_type_element js-code">
-										<div class="code__text">&lt;div class='review__quote'&gt;</div>
-										<div class="code code_type_element js-code">
-											<div class="code__text">&lt;div class='review__text review__text_color_blue'&gt;</div>
-											<div class="code">
-												<div class="code__text">Text</div>
+						<div class="flex__item flex__item_ghow_1">
+							<div class="code js-selection-connect">
+								<div class="code__lang">html</div>
+								<div class="code__souce">
+									<div class="code__line code__line_color_green code__line_level_0 code__line_type_part js-selection-code" data-way="0.review">&lt;<span class="code__highlight code__highlight_html_tag">div</span>  <span class="code__highlight code__highlight_html_key">class</span>=<span class="code__highlight code__highlight_html_value">'review'</span>&gt;
+										<div class="code__line code__line_color_green code__line_level_1 code__line_type_element code__line_type_part js-selection-code"
+										data-way="0.review / 0.review.photo">&lt;<span class="code__highlight code__highlight_html_tag">img</span>  <span class="code__highlight code__highlight_html_key">class</span>=<span class="code__highlight code__highlight_html_value">'review__photo'</span>  <span class="code__highlight code__highlight_html_key">src</span>=
+											<span
+											class="code__highlight code__highlight_html_value">'photo.jpg'</span>&gt;</div>
+										<div class="code__line code__line_color_green code__line_level_1 code__line_type_element code__line_type_part js-selection-code" data-way="0.review / 0.review.photo / 1.review.quote">&lt;<span class="code__highlight code__highlight_html_tag">div</span>  <span class="code__highlight code__highlight_html_key">class</span>=<span class="code__highlight code__highlight_html_value">'review__quote'</span>&gt;
+											<div class="code__line code__line_color_green code__line_level_2 code__line_type_element code__line_type_part js-selection-code"
+											data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text">&lt;<span class="code__highlight code__highlight_html_tag">div</span>  <span class="code__highlight code__highlight_html_key">class</span>=<span class="code__highlight code__highlight_html_value">'review__text'</span>&gt;
+												<div class="code__line code__line_level_3 code__line_type_content"><span class="code__highlight code__highlight_html_content">Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить работу без него.</span>
+												</div>
+												<div class="code__line code__line_level_3 code__line_type_close">&lt;/<span class="code__highlight code__highlight_html_tag">div</span>&gt;</div>
 											</div>
-											<div class="code__text">&lt;/div&gt;</div>
-										</div>
-										<div class="code code_type_element js-code">
-											<div class="code__text">&lt;div class='review__autor review__autor_size_large'&gt;</div>
-											<div class="code">
-												<div class="code__text">Autor</div>
+											<div class="code__line code__line_color_green code__line_level_2 code__line_type_element code__line_type_part js-selection-code" data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text / 1.review.autor">&lt;<span class="code__highlight code__highlight_html_tag">div</span>  <span class="code__highlight code__highlight_html_key">class</span>=<span class="code__highlight code__highlight_html_value">'review__autor'</span>&gt;
+												<div class="code__line code__line_level_3 code__line_type_content"><span class="code__highlight code__highlight_html_content">Валерия Иванова</span>
+												</div>
+												<div class="code__line code__line_level_3 code__line_type_close">&lt;/<span class="code__highlight code__highlight_html_tag">div</span>&gt;</div>
 											</div>
-											<div class="code__text">&lt;/div&gt;</div>
+											<div class="code__line code__line_level_2 code__line_type_close">&lt;/<span class="code__highlight code__highlight_html_tag">div</span>&gt;</div>
 										</div>
-										<div class="code__text">&lt;/div&gt;</div>
+										<div class="code__line code__line_level_1 code__line_type_close">&lt;/<span class="code__highlight code__highlight_html_tag">div</span>&gt;</div>
 									</div>
-									<div class="code__text">&lt;/article&gt;</div>
 								</div>
 							</div>
-							<div class="example__lang">HTML5</div>
 						</div>
 					</div>
 				</div>
-				<button class="button button_color_aqua"><span class="button__text">Да, неплохо, буду использовать!</span>
-				</button>
+			</div>
 			</div>
 		</section>
 		<section class="section section_color_green">
 			<div class="section__wrapper">
 				<div class="heading">
-					<h2 class="title title_level_2">Блок</h2>
-					<div class="heading__separator">
-						<div class="separator"></div>
+					<div class="heading__title">
+						<h2 class="title title_level_2">Блок</h2>
 					</div>
 					<div class="heading__description">
-						<div class="description">Независимая логическая единица. Основным преимуществом независимости является возможность повторного использования без дополнительной доработки.</div>
+						<div class="description">Независимая логическая единица. Доступна возможность повторного использования без дополнительной доработки.</div>
 					</div>
 				</div>
-				<div class="example example_color_white js-example">
-					<div class="example__text">В данном примере два блока <b>+b.reviews</b> (список отзывов) и <b>+b.review</b> (сам отзыв).
-						<br>При этом <b>+b.review</b> вложен в элемент <b>+e.item</b> блока <b>+b.reviews</b> для контроля над его положением.</div>
-					<div class="example__box">
-						<div class="example__view js-example-target">
-							<div class="bem bem_color_orange bem_type_block js-bem">
-								<div class="bem bem_type_element js-bem">
-									<div class="bem bem_color_purple bem_display_rows bem_type_block js-bem">
-										<div class="bem bem_type_element js-bem">
-											<div class="content content_photo_1 content_type_image"></div>
-										</div>
-										<div class="bem bem_type_element js-bem">
-											<div class="bem bem_type_element js-bem">
-												<div class="content content_type_quote">Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить свою работу без него.</div>
-											</div>
-											<div class="bem bem_type_element js-bem">
-												<div class="content content_type_autor">Валерия Иванова</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="bem bem_type_element js-bem">
-									<div class="bem bem_color_purple bem_display_rows bem_type_block js-bem">
-										<div class="bem bem_type_element js-bem">
-											<div class="content content_photo_2 content_type_image"></div>
-										</div>
-										<div class="bem bem_type_element js-bem">
-											<div class="bem bem_type_element js-bem">
-												<div class="content content_type_quote">БЭМ, спасибо что ты есть!</div>
-											</div>
-											<div class="bem bem_type_element js-bem">
-												<div class="content content_type_autor">Диана Тимофеева</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="example__code">
-							<div class="example__source js-example-target">
-								<div class="code code_color_orange code_type_block js-code">
-									<div class="code__text">+b.reviews</div>
-									<div class="code code_type_element js-code">
-										<div class="code__text">+e.item</div>
-										<div class="code code_color_purple code_display_rows code_type_block js-code">
-											<div class="code__text">+b.review</div>
-											<div class="code code_type_element js-code">
-												<div class="code__text">+e('img').photo(src='photo-1.png')</div>
-											</div>
-											<div class="code code_type_element js-code">
-												<div class="code__text">+e.quote</div>
-												<div class="code code_type_element js-code">
-													<div class="code__text">+e.text Раньше я {...} работу без него.</div>
+				<div class="box">
+					<div class="box__item">В данном примере два блока <b class="text text_weight_bold">+b.reviews</b> (список отзывов) и <b class="text text_weight_bold">+b.review</b> (сам отзыв).
+						<br>При этом <b class="text text_weight_bold">+b.review</b> вложен в элемент <b class="text text_weight_bold">+e.item</b> блока <b class="text text_weight_bold">+b.reviews</b> для контроля над его положением.</div>
+					<div class="flex flex_cols_2 js-selection">
+						<div class="flex__item flex__item_ghow_1">
+							<div class="example js-selection-connect">
+								<div class="example__name">frame</div>
+								<div class="example__frame">
+									<div class="example-reviews example__element example__element_color_orange js-selection-example" data-way="0.reviews">
+										<div class="example-reviews__item example__element example__element_color_orange example__element_type_element js-selection-example" data-way="0.reviews / 0.reviews.item">
+											<div class="example-review example__element example__element_color_green js-selection-example" data-way="0.reviews / 0.reviews.item / 0.review">
+												<div class="example__element example__element_type_element example__element_color_green js-selection-example" data-way="0.reviews / 0.reviews.item / 0.review / 0.review.photo">
+													<img class="example-review__photo js-selection-example" src="/assets/images/example/photo.jpg" alt="">
 												</div>
-												<div class="code code_type_element js-code">
-													<div class="code__text">+e.autor Валерия Иванова</div>
+												<div class="example-review__quote example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.reviews / 0.reviews.item / 0.review / 0.review.photo / 1.review.quote">
+													<div class="example-review__text example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.reviews / 0.reviews.item / 0.review / 0.review.photo / 1.review.quote / 0.review.text">Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить работу без него.</div>
+													<div class="example-review__autor example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.reviews / 0.reviews.item / 0.review / 0.review.photo / 1.review.quote / 0.review.text / 1.review.autor">Валерия Иванова</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="code code_type_element js-code">
-										<div class="code__text">+e.item</div>
-										<div class="code code_color_purple code_display_rows code_type_block js-code">
-											<div class="code__text">+b.review</div>
-											<div class="code code_type_element js-code">
-												<div class="code__text">+e('img').photo(src='photo-2.png')</div>
-											</div>
-											<div class="code code_type_element js-code">
-												<div class="code__text">+e.quote</div>
-												<div class="code code_type_element js-code">
-													<div class="code__text">+e.text БЭМ, спасибо что ты есть!</div>
+										<div class="example-reviews__item example__element example__element_color_orange example__element_type_element js-selection-example" data-way="0.reviews / 0.reviews.item / 1.reviews.item">
+											<div class="example-review example-review_view_reverse example__element example__element_color_green js-selection-example" data-way="0.reviews / 0.reviews.item / 1.reviews.item / 0.review">
+												<div class="example__element example__element_type_element example__element_color_green js-selection-example" data-way="0.reviews / 0.reviews.item / 1.reviews.item / 0.review / 0.review.photo">
+													<img class="example-review__photo js-selection-example" src="/assets/images/example/photo-2.jpg" alt="">
 												</div>
-												<div class="code code_type_element js-code">
-													<div class="code__text">+e.autor Диана Тимофеева</div>
+												<div class="example-review__quote example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.reviews / 0.reviews.item / 1.reviews.item / 0.review / 0.review.photo / 1.review.quote">
+													<div class="example-review__text example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.reviews / 0.reviews.item / 1.reviews.item / 0.review / 0.review.photo / 1.review.quote / 0.review.text">Гениально! Как легко можно управлять блоками. БЭМ, спасибо что ты есть!</div>
+													<div class="example-review__autor example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.reviews / 0.reviews.item / 1.reviews.item / 0.review / 0.review.photo / 1.review.quote / 0.review.text / 1.review.autor">Диана Тимофеева</div>
 												</div>
 											</div>
 										</div>
@@ -249,150 +222,212 @@
 								</div>
 							</div>
 						</div>
+						<div class="flex__item flex__item_ghow_1">
+							<div class="code js-selection-connect">
+								<div class="code__lang">bemto</div>
+								<div class="code__souce">
+									<div class="code__line code__line_color_orange code__line_level_0 code__line_type_part js-selection-code" data-way="0.reviews"><span class="code__highlight code__highlight_bemto_type">+b</span><span class="code__highlight code__highlight_bemto_class">.reviews</span>
+										<div class="code__line code__line_color_orange code__line_level_1 code__line_type_element code__line_type_part js-selection-code"
+										data-way="0.reviews / 0.reviews.item"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.item</span>
+											<div class="code__line code__line_color_green code__line_level_2 code__line_type_part js-selection-code"
+											data-way="0.reviews / 0.reviews.item / 0.review"><span class="code__highlight code__highlight_bemto_type">+b</span><span class="code__highlight code__highlight_bemto_class">.review</span>
+												<div class="code__line code__line_color_green code__line_level_3 code__line_type_element code__line_type_part js-selection-code"
+												data-way="0.reviews / 0.reviews.item / 0.review / 0.review.photo"><span class="code__highlight code__highlight_bemto_type">+e</span>(<span class="code__highlight code__highlight_bemto_tag">'img'</span>)<span class="code__highlight code__highlight_bemto_class">.photo</span>(<span class="code__highlight code__highlight_bemto_key">src</span>=
+													<span
+													class="code__highlight code__highlight_bemto_value">'photo.jpg'</span>)</div>
+												<div class="code__line code__line_color_green code__line_level_3 code__line_type_element code__line_type_part js-selection-code" data-way="0.reviews / 0.reviews.item / 0.review / 0.review.photo / 1.review.quote"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.quote</span>
+													<div class="code__line code__line_color_green code__line_level_4 code__line_type_element code__line_type_part js-selection-code"
+													data-way="0.reviews / 0.reviews.item / 0.review / 0.review.photo / 1.review.quote / 0.review.text"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.text</span>
+														<div class="code__line code__line_level_5 code__line_type_content"><span class="code__highlight code__highlight_bemto_content">| Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить работу без него.</span>
+														</div>
+													</div>
+													<div class="code__line code__line_color_green code__line_level_4 code__line_type_element code__line_type_part js-selection-code" data-way="0.reviews / 0.reviews.item / 0.review / 0.review.photo / 1.review.quote / 0.review.text / 1.review.autor"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.autor</span>
+														<div class="code__line code__line_level_5 code__line_type_content"><span class="code__highlight code__highlight_bemto_content">| Валерия Иванова</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="code__line code__line_color_orange code__line_level_1 code__line_type_element code__line_type_part js-selection-code" data-way="0.reviews / 0.reviews.item / 1.reviews.item"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.item</span>
+											<div class="code__line code__line_color_green code__line_level_2 code__line_type_part js-selection-code"
+											data-way="0.reviews / 0.reviews.item / 1.reviews.item / 0.review"><span class="code__highlight code__highlight_bemto_type">+b</span><span class="code__highlight code__highlight_bemto_class">.review_view_reverse</span>
+												<div class="code__line code__line_color_green code__line_level_3 code__line_type_element code__line_type_part js-selection-code"
+												data-way="0.reviews / 0.reviews.item / 1.reviews.item / 0.review / 0.review.photo"><span class="code__highlight code__highlight_bemto_type">+e</span>(<span class="code__highlight code__highlight_bemto_tag">'img'</span>)<span class="code__highlight code__highlight_bemto_class">.photo</span>(<span class="code__highlight code__highlight_bemto_key">src</span>=
+													<span
+													class="code__highlight code__highlight_bemto_value">'photo-2.jpg'</span>)</div>
+												<div class="code__line code__line_color_green code__line_level_3 code__line_type_element code__line_type_part js-selection-code" data-way="0.reviews / 0.reviews.item / 1.reviews.item / 0.review / 0.review.photo / 1.review.quote"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.quote</span>
+													<div class="code__line code__line_color_green code__line_level_4 code__line_type_element code__line_type_part js-selection-code"
+													data-way="0.reviews / 0.reviews.item / 1.reviews.item / 0.review / 0.review.photo / 1.review.quote / 0.review.text"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.text</span>
+														<div class="code__line code__line_level_5 code__line_type_content"><span class="code__highlight code__highlight_bemto_content">| Гениально! Как легко можно управлять блоками. БЭМ, спасибо что ты есть!</span>
+														</div>
+													</div>
+													<div class="code__line code__line_color_green code__line_level_4 code__line_type_element code__line_type_part js-selection-code" data-way="0.reviews / 0.reviews.item / 1.reviews.item / 0.review / 0.review.photo / 1.review.quote / 0.review.text / 1.review.autor"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.autor</span>
+														<div class="code__line code__line_level_5 code__line_type_content"><span class="code__highlight code__highlight_bemto_content">| Диана Тимофеева</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<button class="button button_color_orange"><span class="button__text">С блоками понятно, что там дальше?</span>
-				</button>
 			</div>
 		</section>
 		<section class="section section_color_purple">
 			<div class="section__wrapper">
 				<div class="heading">
-					<h2 class="title title_level_2">Элемент</h2>
-					<div class="heading__separator">
-						<div class="separator"></div>
+					<div class="heading__title">
+						<h2 class="title title_level_2">Элемент</h2>
 					</div>
 					<div class="heading__description">
-						<div class="description">Часть которая не может существовать вне контекста блока. Наличие элементов добавляет возможность изменять структуру блока, элементы можно поменять местами, удалить или добавить. Иногда нужны для позиционирования вложенных блоков.</div>
+						<div class="description">Часть которая не&nbsp;может существовать вне контекста блока. Наличие элементов добавляет возможность изменять структуру блока, элементы можно поменять местами, удалить или добавить. Иногда нужны для позиционирования вложенных блоков.</div>
 					</div>
 				</div>
-				<div class="example example_color_white js-example">
-					<div class="example__text">Представлен блок <b>+b.review</b> с несколькими элементами.
-						<br> <b>+e.photo</b> - фотография пользователя, <b>+e.quote</b> - дополнительный элемент выравнивания,
-						<br> <b>+e.text</b> и <b>+e.autor</b> - соответственно текст и автор отзыва.</div>
-					<div class="example__box">
-						<div class="example__view js-example-target">
-							<div class="bem bem_color_purple bem_display_rows bem_type_block js-bem">
-								<div class="bem bem_type_element js-bem">
-									<div class="content content_photo_1 content_type_image"></div>
-								</div>
-								<div class="bem bem_type_element js-bem">
-									<div class="bem bem_type_element js-bem">
-										<div class="content content_type_quote">Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить свою работу без него.</div>
-									</div>
-									<div class="bem bem_type_element js-bem">
-										<div class="content content_type_autor">Валерия Иванова</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="example__code">
-							<div class="example__source js-example-target">
-								<div class="code code_color_purple code_display_rows code_type_block js-code">
-									<div class="code__text">+b.review</div>
-									<div class="code code_type_element js-code">
-										<div class="code__text">+e('img').photo(src='http://demo.com/user-photo-1.png')</div>
-									</div>
-									<div class="code code_type_element js-code">
-										<div class="code__text">+e.quote</div>
-										<div class="code code_type_element js-code">
-											<div class="code__text">+e.text</div>
-											<div class="code">
-												<div class="code__text">| Раньше я {...} работу без него.</div>
-											</div>
+				<div class="box">
+					<div class="box__item">Представлен блок <b class="text text_weight_bold">+b.review</b> с несколькими элементами.
+						<br><b class="text text_weight_bold">+e.photo</b> - фотография пользователя, <b class="text text_weight_bold">+e.quote</b> - дополнительный элемент выравнивания,
+						<br><b class="text text_weight_bold">+e.text</b> и <b class="text text_weight_bold">+e.autor</b> - соответственно текст и автор отзыва.</div>
+					<div class="flex flex_cols_2 js-selection">
+						<div class="flex__item flex__item_ghow_1">
+							<div class="example js-selection-connect">
+								<div class="example__name">frame</div>
+								<div class="example__frame">
+									<div class="example-review example__element example__element_color_green js-selection-example" data-way="0.review">
+										<div class="example__element example__element_type_element example__element_color_green js-selection-example" data-way="0.review / 0.review.photo">
+											<img class="example-review__photo js-selection-example" src="/assets/images/example/photo.jpg" alt="">
 										</div>
-										<div class="code code_type_element js-code">
-											<div class="code__text">+e.autor</div>
-											<div class="code">
-												<div class="code__text">| Валерия Иванова.</div>
-											</div>
+										<div class="example-review__quote example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.review / 0.review.photo / 1.review.quote">
+											<div class="example-review__text example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text">Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить работу без него.</div>
+											<div class="example-review__autor example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text / 1.review.autor">Валерия Иванова</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+						<div class="flex__item flex__item_ghow_1">
+							<div class="code js-selection-connect">
+								<div class="code__lang">bemto</div>
+								<div class="code__souce">
+									<div class="code__line code__line_color_green code__line_level_0 code__line_type_part js-selection-code" data-way="0.review"><span class="code__highlight code__highlight_bemto_type">+b</span><span class="code__highlight code__highlight_bemto_class">.review</span>
+										<div class="code__line code__line_color_green code__line_level_1 code__line_type_element code__line_type_part js-selection-code"
+										data-way="0.review / 0.review.photo"><span class="code__highlight code__highlight_bemto_type">+e</span>(<span class="code__highlight code__highlight_bemto_tag">'img'</span>)<span class="code__highlight code__highlight_bemto_class">.photo</span>(<span class="code__highlight code__highlight_bemto_key">src</span>=
+											<span
+											class="code__highlight code__highlight_bemto_value">'photo.jpg'</span>)</div>
+										<div class="code__line code__line_color_green code__line_level_1 code__line_type_element code__line_type_part js-selection-code" data-way="0.review / 0.review.photo / 1.review.quote"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.quote</span>
+											<div class="code__line code__line_color_green code__line_level_2 code__line_type_element code__line_type_part js-selection-code"
+											data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.text</span>
+												<div class="code__line code__line_level_3 code__line_type_content"><span class="code__highlight code__highlight_bemto_content">| Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить работу без него.</span>
+												</div>
+											</div>
+											<div class="code__line code__line_color_green code__line_level_2 code__line_type_element code__line_type_part js-selection-code" data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text / 1.review.autor"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.autor</span>
+												<div class="code__line code__line_level_3 code__line_type_content"><span class="code__highlight code__highlight_bemto_content">| Валерия Иванова</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<button class="button button_color_blue"><span class="button__text">Выглядит неплохо, а зачем модификаторы?</span>
-				</button>
 			</div>
 		</section>
 		<section class="section section_color_blue">
 			<div class="section__wrapper">
 				<div class="heading">
-					<h2 class="title title_level_2">Модификатор</h2>
-					<div class="heading__separator">
-						<div class="separator"></div>
+					<div class="heading__title">
+						<h2 class="title title_level_2">Модификатор</h2>
 					</div>
 					<div class="heading__description">
 						<div class="description">Опциональный параметр, определяющий внешний вид блока или элемента. Используя модификаторы можно получить бесконечное количество вариаций отображения. Модификация может быть любой: цвет фона и текста; состояние и размеры элементов; И так дальше...</div>
 					</div>
 				</div>
-				<div class="example example_color_white js-example">
-					<div class="example__text">В данном примере два модификатора для блоков <b>+b.reviews<i>_view_rows</i></b> и <b>+b.review<i>_view_columns</i></b>.
-						<br>С их помощью мы добавили колоночное отображение списка и самого отзыва.</div>
-					<div class="example__box">
-						<div class="example__view js-example-target">
-							<div class="bem bem_align_stretch bem_color_orange bem_display_rows bem_type_block js-bem">
-								<div class="bem bem_align_stretch bem_display_rows bem_type_element js-bem">
-									<div class="bem bem_color_purple bem_display_columns bem_type_block js-bem">
-										<div class="bem bem_type_element js-bem">
-											<div class="content content_photo_1 content_type_image"></div>
-										</div>
-										<div class="bem bem_type_element js-bem">
-											<div class="content content_align_center content_type_quote">Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить свою работу без него.</div>
-										</div>
-										<div class="bem bem_type_element js-bem">
-											<div class="content content_type_autor">Валерия Иванова</div>
+				<div class="box js-selection">
+					<div class="box__item">В данном примере блок <b class="text text_weight_bold">+b.review</b> изменяет свой вид при помощи модификатора <b class="text text_style_italic text_weight_bold">_view_rows</b>.</div>
+					<div class="box__item">
+						<div class="flex flex_cols_2">
+							<div class="flex__item flex__item_ghow_1">
+								<div class="example js-selection-connect">
+									<div class="example__name">frame</div>
+									<div class="example__frame">
+										<div class="example-review example-review_view_columns example__element example__element_color_green js-selection-example" data-way="0.review">
+											<div class="example__element example__element_type_element example__element_color_green js-selection-example" data-way="0.review / 0.review.photo">
+												<img class="example-review__photo js-selection-example" src="/assets/images/example/photo.jpg" alt="">
+											</div>
+											<div class="example-review__quote example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.review / 0.review.photo / 1.review.quote">
+												<div class="example-review__text example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text">Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить работу без него.</div>
+												<div class="example-review__autor example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text / 1.review.autor">Валерия Иванова</div>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="bem bem_align_stretch bem_display_rows bem_type_element js-bem">
-									<div class="bem bem_color_purple bem_display_columns bem_type_block js-bem">
-										<div class="bem bem_type_element js-bem">
-											<div class="content content_photo_2 content_type_image"></div>
-										</div>
-										<div class="bem bem_type_element js-bem">
-											<div class="content content_align_center content_type_quote">БЭМ, спасибо что ты есть!</div>
-										</div>
-										<div class="bem bem_type_element js-bem">
-											<div class="content content_type_autor">Диана Тимофеева</div>
+							</div>
+							<div class="flex__item flex__item_ghow_1">
+								<div class="code js-selection-connect">
+									<div class="code__lang">bemto</div>
+									<div class="code__souce">
+										<div class="code__line code__line_color_green code__line_level_0 code__line_type_part js-selection-code" data-way="0.review"><span class="code__highlight code__highlight_bemto_type">+b</span><span class="code__highlight code__highlight_bemto_class">.review_view_columns</span>
+											<div class="code__line code__line_color_green code__line_level_1 code__line_type_element code__line_type_part js-selection-code"
+											data-way="0.review / 0.review.photo"><span class="code__highlight code__highlight_bemto_type">+e</span>(<span class="code__highlight code__highlight_bemto_tag">'img'</span>)<span class="code__highlight code__highlight_bemto_class">.photo</span>(<span class="code__highlight code__highlight_bemto_key">src</span>=
+												<span
+												class="code__highlight code__highlight_bemto_value">'photo.jpg'</span>)</div>
+											<div class="code__line code__line_color_green code__line_level_1 code__line_type_element code__line_type_part js-selection-code" data-way="0.review / 0.review.photo / 1.review.quote"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.quote</span>
+												<div class="code__line code__line_color_green code__line_level_2 code__line_type_element code__line_type_part js-selection-code"
+												data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.text</span>
+													<div class="code__line code__line_level_3 code__line_type_content"><span class="code__highlight code__highlight_bemto_content">| Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить работу без него.</span>
+													</div>
+												</div>
+												<div class="code__line code__line_color_green code__line_level_2 code__line_type_element code__line_type_part js-selection-code" data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text / 1.review.autor"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.autor</span>
+													<div class="code__line code__line_level_3 code__line_type_content"><span class="code__highlight code__highlight_bemto_content">| Валерия Иванова</span>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="example__code">
-							<div class="example__source js-example-target">
-								<div class="code code_align_stretch code_color_orange code_display_rows code_type_block js-code">
-									<div class="code__text">+b.reviews_view_rows</div>
-									<div class="code code_align_stretch code_display_rows code_type_element js-code">
-										<div class="code__text">+e.item</div>
-										<div class="code code_color_purple code_display_columns code_type_block js-code">
-											<div class="code__text">+b.review_view_columns</div>
-											<div class="code code_type_element js-code">
-												<div class="code__text">+e('img').photo(src='photo-1.png')</div>
+					</div>
+					<div class="box__item">
+						<div class="flex flex_cols_2">
+							<div class="flex__item flex__item_ghow_1">
+								<div class="example js-selection-connect">
+									<div class="example__name">frame</div>
+									<div class="example__frame">
+										<div class="example-review example__element example__element_color_green js-selection-example" data-way="0.review">
+											<div class="example__element example__element_type_element example__element_color_green js-selection-example" data-way="0.review / 0.review.photo">
+												<img class="example-review__photo js-selection-example" src="/assets/images/example/photo.jpg" alt="">
 											</div>
-											<div class="code code_type_element js-code">
-												<div class="code__text">+e.text Раньше я {...} работу без него.</div>
-											</div>
-											<div class="code code_type_element js-code">
-												<div class="code__text">+e.autor Валерия Иванова</div>
+											<div class="example-review__quote example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.review / 0.review.photo / 1.review.quote">
+												<div class="example-review__text example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text">Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить работу без него.</div>
+												<div class="example-review__autor example__element example__element_color_green example__element_type_element js-selection-example" data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text / 1.review.autor">Валерия Иванова</div>
 											</div>
 										</div>
 									</div>
-									<div class="code code_align_stretch code_display_rows code_type_element js-code">
-										<div class="code__text">+e.item</div>
-										<div class="code code_color_purple code_display_columns code_type_block js-code">
-											<div class="code__text">+b.review_view_columns</div>
-											<div class="code code_type_element js-code">
-												<div class="code__text">+e('img').photo(src='photo-2.png')</div>
-											</div>
-											<div class="code code_type_element js-code">
-												<div class="code__text">+e.text БЭМ, спасибо что ты есть!</div>
-											</div>
-											<div class="code code_type_element js-code">
-												<div class="code__text">+e.autor Диана Тимофеева</div>
+								</div>
+							</div>
+							<div class="flex__item flex__item_ghow_1">
+								<div class="code js-selection-connect">
+									<div class="code__lang">bemto</div>
+									<div class="code__souce">
+										<div class="code__line code__line_color_green code__line_level_0 code__line_type_part js-selection-code" data-way="0.review"><span class="code__highlight code__highlight_bemto_type">+b</span><span class="code__highlight code__highlight_bemto_class">.review</span>
+											<div class="code__line code__line_color_green code__line_level_1 code__line_type_element code__line_type_part js-selection-code"
+											data-way="0.review / 0.review.photo"><span class="code__highlight code__highlight_bemto_type">+e</span>(<span class="code__highlight code__highlight_bemto_tag">'img'</span>)<span class="code__highlight code__highlight_bemto_class">.photo</span>(<span class="code__highlight code__highlight_bemto_key">src</span>=
+												<span
+												class="code__highlight code__highlight_bemto_value">'photo.jpg'</span>)</div>
+											<div class="code__line code__line_color_green code__line_level_1 code__line_type_element code__line_type_part js-selection-code" data-way="0.review / 0.review.photo / 1.review.quote"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.quote</span>
+												<div class="code__line code__line_color_green code__line_level_2 code__line_type_element code__line_type_part js-selection-code"
+												data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.text</span>
+													<div class="code__line code__line_level_3 code__line_type_content"><span class="code__highlight code__highlight_bemto_content">| Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить работу без него.</span>
+													</div>
+												</div>
+												<div class="code__line code__line_color_green code__line_level_2 code__line_type_element code__line_type_part js-selection-code" data-way="0.review / 0.review.photo / 1.review.quote / 0.review.text / 1.review.autor"><span class="code__highlight code__highlight_bemto_type">+e</span><span class="code__highlight code__highlight_bemto_class">.autor</span>
+													<div class="code__line code__line_level_3 code__line_type_content"><span class="code__highlight code__highlight_bemto_content">| Валерия Иванова</span>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -401,19 +436,17 @@
 						</div>
 					</div>
 				</div>
-				<button class="button button_color_aqua"><span class="button__text">Круто, а с чего начинать?</span>
-				</button>
 			</div>
 		</section>
 		<section class="section section_color_green">
 			<div class="section__wrapper">
 				<div class="heading">
-					<h2 class="title title_level_2">Основные этапы разработки</h2>
-					<div class="heading__separator">
-						<div class="separator"></div>
+					<div class="heading__title">
+						<h2 class="title title_level_2">Основные этапы разработки</h2>
 					</div>
 					<div class="heading__description">
-						<div class="description">БЭМ-методология затрагивает все этапы, чтобы оптимизировать скорость и качество разработки, мы&nbsp;предлагаем такой порядок разработки</div>
+						<div class="description">БЭМ-методология затрагивает все этапы, чтобы оптимизировать скорость и качество разработки, мы предлагаем такой порядок разработкиЗнать БЭМ-методологию обязан каждый уважающий себя верстальщик
+						</div>
 					</div>
 				</div>
 				<div class="features">
@@ -423,8 +456,10 @@
 								<use xlink:href="assets/images/icon.svg#icon_analytics"></use>
 							</svg>
 						</div>
-						<div class="feature__title">Анализ</div>
-						<div class="feature__description">Схематически разделить страницу на логические блоки и их элементы</div>
+						<div class="feature__box">
+							<h3 class="title title_level_3">Анализ</h3>
+							<div class="text">Схематически разделить страницу на логические блоки и их элементы</div>
+						</div>
 					</div>
 					<div class="feature">
 						<div class="round round_background_orange round_color_white">
@@ -432,8 +467,10 @@
 								<use xlink:href="assets/images/icon.svg#icon_source"></use>
 							</svg>
 						</div>
-						<div class="feature__title">Разметка</div>
-						<div class="feature__description">Пишем разметку для уже&nbsp;разделенных блоков и добавляем их на&nbsp;страницу</div>
+						<div class="feature__box">
+							<h3 class="title title_level_3">Разметка</h3>
+							<div class="text">Пишем разметку для уже разделенных блоков и добавляем их на страницу</div>
+						</div>
 					</div>
 					<div class="feature">
 						<div class="round round_background_orange round_color_white">
@@ -441,8 +478,10 @@
 								<use xlink:href="assets/images/icon.svg#icon_style"></use>
 							</svg>
 						</div>
-						<div class="feature__title">Стилизация</div>
-						<div class="feature__description">Позиционируем блоки, наводим Pixel Perfect и закладываем анимации</div>
+						<div class="feature__box">
+							<h3 class="title title_level_3">Стилизация</h3>
+							<div class="text">Позиционируем блоки, наводим Pixel Perfect и закладываем анимации</div>
+						</div>
 					</div>
 					<div class="feature">
 						<div class="round round_background_orange round_color_white">
@@ -450,134 +489,25 @@
 								<use xlink:href="assets/images/icon.svg#icon_logic"></use>
 							</svg>
 						</div>
-						<div class="feature__title">Логика</div>
-						<div class="feature__description">Заставляем верстку работать, добавив в блоки магию JavaScript</div>
+						<div class="feature__box">
+							<h3 class="title title_level_3">Логика</h3>
+							<div class="text">Заставляем верстку работать, добавив в блоки магию JavaScript</div>
+						</div>
 					</div>
 				</div>
-				<button class="button button_color_orange"><span class="button__text">Хорошо, а можно подробнее?</span>
-				</button>
 			</div>
 		</section>
-		<section class="section section_color_light">
+		<section class="section section_align_middle section_color_light">
 			<div class="section__wrapper">
 				<div class="heading">
 					<h2 class="title title_level_2">Анализ задачи, макета и логики</h2>
-					<div class="heading__separator">
-						<div class="separator"></div>
-					</div>
-					<div class="heading__description">
-						<div class="description">На данном этапе мы выделяем будущие блоки и их элементы.
-							<br>Разбивая макеты на блоки важно помнить несколько простых правил, соблюдая их мы получим гибкую и отзывчивую верстку.</div>
-					</div>
+					<div class="description">На данном этапе мы выделяем будущие блоки и их элементы.
+						<br>Разбивая макеты на блоки важно помнить несколько простых правил, соблюдая их мы получим гибкую и отзывчивую верстку.</div>
 				</div>
-				<div class="round round_color_blue round_size_large">
+				<div class="round round_size_large">
 					<svg class="round__image">
 						<use xlink:href="assets/images/icon.svg#icon_analytics"></use>
 					</svg>
-				</div>
-				<button class="button button_color_aqua"><span class="button__text">Ну давай по порядку!</span>
-				</button>
-			</div>
-		</section>
-		<section class="section section_color_white">
-			<div class="section__wrapper">
-				<div class="features features_direction_column features_size_fullscreen">
-					<div class="feature feature_direction_row">
-						<div class="round round_background_aqua round_color_white round_size_large">
-							<svg class="round__image">
-								<use xlink:href="assets/images/icon.svg#icon_source"></use>
-							</svg>
-						</div>
-						<div class="feature__heading">
-							<div class="heading heading_align_left">
-								<h3 class="title title_level_3">Lorem ipsum dolor sit amet</h3>
-								<div class="heading__separator">
-									<div class="separator"></div>
-								</div>
-								<div class="heading__description">
-									<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="feature feature_direction_row">
-						<div class="feature__heading">
-							<div class="heading heading_align_right">
-								<h3 class="title title_level_3">Lorem ipsum dolor sit amet</h3>
-								<div class="heading__separator">
-									<div class="separator"></div>
-								</div>
-								<div class="heading__description">
-									<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-								</div>
-							</div>
-						</div>
-						<div class="round round_background_aqua round_color_white round_size_large">
-							<svg class="round__image">
-								<use xlink:href="assets/images/icon.svg#icon_source"></use>
-							</svg>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="section section_color_green">
-			<div class="section__wrapper">
-				<div class="features features_direction_column features_size_fullscreen">
-					<div class="feature feature_direction_row feature_text_large">
-						<div class="round round_background_orange round_color_white">
-							<svg class="round__image">
-								<use xlink:href="assets/images/icon.svg#icon_source"></use>
-							</svg>
-						</div>
-						<div class="feature__heading">
-							<div class="heading heading_align_left">
-								<h3 class="title title_level_3">Lorem ipsum dolor sit amet</h3>
-								<div class="heading__separator">
-									<div class="separator"></div>
-								</div>
-								<div class="heading__description">
-									<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="feature feature_direction_row feature_text_large">
-						<div class="feature__heading">
-							<div class="heading heading_align_right">
-								<h3 class="title title_level_3">Lorem ipsum dolor sit amet</h3>
-								<div class="heading__separator">
-									<div class="separator"></div>
-								</div>
-								<div class="heading__description">
-									<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-								</div>
-							</div>
-						</div>
-						<div class="round round_background_orange round_color_white">
-							<svg class="round__image">
-								<use xlink:href="assets/images/icon.svg#icon_source"></use>
-							</svg>
-						</div>
-					</div>
-					<div class="feature feature_direction_row feature_text_large">
-						<div class="round round_background_orange round_color_white">
-							<svg class="round__image">
-								<use xlink:href="assets/images/icon.svg#icon_source"></use>
-							</svg>
-						</div>
-						<div class="feature__heading">
-							<div class="heading heading_align_left">
-								<h3 class="title title_level_3">Lorem ipsum dolor sit amet</h3>
-								<div class="heading__separator">
-									<div class="separator"></div>
-								</div>
-								<div class="heading__description">
-									<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</section>
