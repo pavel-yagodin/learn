@@ -9,6 +9,11 @@ mixin example-block(items, ways, blockName, blockColor)
 		- item.color = item.color || blockColor;
 		- item.attrs = item.attrs || {};
 		- var tagName = item.tag || 'div';
+		if item.content
+			if typeof item.content == 'string'
+				- item.content = [item.content];
+		else
+			- item.content = []
 
 		if item.block
 			if ways
@@ -45,8 +50,8 @@ mixin example-block(items, ways, blockName, blockColor)
 
 		if !item.element
 			+b(tagName)(class=[classes, classesExample])&attributes(item.attrs)
-				if item.content
-					!=item.content
+				if item.content.length
+					!=(item.content).join(' ')
 
 				if item.clild
 					+example-block(item.clild, ways, item.block, item.color)
@@ -60,7 +65,7 @@ mixin example-block(items, ways, blockName, blockColor)
 					+e(tagName)(class=classes)&attributes(item.attrs)
 			else
 				+e(tagName)(class=[classes, classesExample])&attributes(item.attrs)
-					if item.content
-						!=item.content
+					if item.content.length
+						!=(item.content).join(' ')
 					if item.clild
 						+example-block(item.clild, ways, item.block, item.color)

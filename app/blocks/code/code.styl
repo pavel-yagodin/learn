@@ -4,17 +4,17 @@
 	text-align right
 	display flex
 	align-items stretch
-	font-family monospace
 	padding-top 16px
 
 	&__souce
 		position relative
 		width 100%
 		border-radius 5px
-		padding 10px 10px 25px
+		padding 26px 10px 10px
 		background-color #272822
 		color #F8F8F2
 		text-align left
+		font-family monospace
 		z-index 1
 
 	&__lang
@@ -24,8 +24,9 @@
 		right 10px
 		background-color #373832
 		border-radius 5px
-		padding 4px 8px
-		color #F92672
+		padding 4px 10px
+		color #fff
+		font-style italic
 		z-index 2
 
 
@@ -45,6 +46,7 @@
 			bottom 4px
 			background-color currentColor
 			opacity 0
+			pointer-events none
 			content ''
 
 		&_state_hover:after

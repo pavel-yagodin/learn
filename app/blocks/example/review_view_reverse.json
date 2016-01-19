@@ -11,7 +11,10 @@
 		"element": "quote",
 		"clild": [{
 			"element": "text",
-			"content": "Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь я&nbsp;не&nbsp;могу представить работу без него."
+			"content": [
+				"Раньше я&nbsp;не&nbsp;понимала БЭМ, а&nbsp;теперь",
+				"я&nbsp;не&nbsp;могу представить работу без него."
+			]
 		}, {
 			"element": "autor",
 			"content": "Валерия Иванова"

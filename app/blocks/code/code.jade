@@ -13,6 +13,12 @@ mixin code-line(items, lang, level, ways, blockName, blockColor)
 		- item.color = item.color || blockColor;
 		- var tagName = item.tag || 'div';
 
+		if item.content
+			if typeof item.content == 'string'
+				- item.content = [item.content];
+		else
+			- item.content = []
+
 		if item.block
 			if ways
 				- ways += ' / ';
@@ -63,9 +69,10 @@ mixin code-line(items, lang, level, ways, blockName, blockColor)
 						- i++;
 					=')'
 
-				if item.content
-					+e.line_type_content(class='_level_'+(level+1))
-						+code-highlight(lang, 'content')!='| '+item.content
+				if item.content.length
+					each html in item.content
+						+e.line_type_content(class='_level_'+(level+1))
+							+code-highlight(lang, 'content')!='| '+html
 
 
 			if lang == 'jade'
@@ -88,14 +95,15 @@ mixin code-line(items, lang, level, ways, blockName, blockColor)
 					each attr, key in item.attrs
 						=i===0?'':' '
 						+code-highlight(lang, 'key')=key
-						='= '
+						='='
 						+code-highlight(lang, 'value')='\''+attr+'\''
 						- i++;
 					=')'
 
 				if item.content
-					+e.line_type_content(class='_level_'+(level+1))
-						+code-highlight(lang, 'content')!='| '+item.content
+					each html in item.content
+						+e.line_type_content(class='_level_'+(level+1))
+							+code-highlight(lang, 'content')!='| '+html
 
 			if lang == 'html'
 				- var el = item.block
@@ -130,8 +138,9 @@ mixin code-line(items, lang, level, ways, blockName, blockColor)
 				='>'
 
 				if item.content
-					+e.line_type_content(class='_level_'+(level+1))
-						+code-highlight(lang, 'content')!=item.content
+					each html in item.content
+						+e.line_type_content(class='_level_'+(level+1))
+							+code-highlight(lang, 'content')!=html
 
 
 			if item.clild
