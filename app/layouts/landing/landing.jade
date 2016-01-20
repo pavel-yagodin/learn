@@ -5,6 +5,8 @@ doctype html
 html(lang='ru')
 	include /blocks/head/head
 	+b('body').landing
+		+icon('csssr').landing__logo
 		block content
+
 
 		+scripts(['app.min.js'])

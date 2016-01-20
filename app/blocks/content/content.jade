@@ -1,8 +1,0 @@
-mixin content(data)
-	- var classes = [];
-	if data.params
-		each name, key in data.params
-			- classes.push('_'+key+'_'+name)
-	+b.content(class=classes)&attributes(attributes)
-		if data.text
-			!=data.text

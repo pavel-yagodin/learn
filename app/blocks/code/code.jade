@@ -8,6 +8,7 @@ mixin code(data)
 
 
 mixin code-line(items, lang, level, ways, blockName, blockColor)
+	- inWay = ways;
 	each item, key in items
 		- item.block = item.block || blockName;
 		- item.color = item.color || blockColor;
@@ -19,17 +20,18 @@ mixin code-line(items, lang, level, ways, blockName, blockColor)
 		else
 			- item.content = []
 
+		- var myWay = inWay;
 		if item.block
-			if ways
-				- ways += ' / ';
+			if myWay
+				- myWay += ' / ';
 			else
-				- ways = '';
-			- ways += key+'.' + item.block;
+				- myWay = '';
+			- myWay += key+'.' + item.block;
 			if item.element
-				- ways += '.'+ item.element;
+				- myWay += '.'+ item.element;
 
 			- var attrs = {};
-			- attrs['data-way'] = ways;
+			- attrs['data-way'] = myWay;
 
 		- var classes = [];
 		- classes.push('_level_'+level)
@@ -144,7 +146,7 @@ mixin code-line(items, lang, level, ways, blockName, blockColor)
 
 
 			if item.clild
-				+code-line(item.clild, lang, level + 1, ways, item.block, item.color)
+				+code-line(item.clild, lang, level + 1, myWay, item.block, item.color)
 
 			if lang == 'html'
 				if ['img'].indexOf(item.tag) === -1

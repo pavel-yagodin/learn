@@ -4,6 +4,7 @@ mixin example(data)
 			+example-block(data.json)
 
 mixin example-block(items, ways, blockName, blockColor)
+	- inWay = ways;
 	each item, key in items
 		- item.block = item.block || blockName;
 		- item.color = item.color || blockColor;
@@ -15,17 +16,18 @@ mixin example-block(items, ways, blockName, blockColor)
 		else
 			- item.content = []
 
+		- var myWay = inWay;
 		if item.block
-			if ways
-				- ways += ' / ';
+			if myWay
+				- myWay += ' / ';
 			else
-				- ways = '';
-			- ways += key+'.' + item.block;
+				- myWay = '';
+			- myWay += key+'.' + item.block;
 			if item.element
-				- ways += '.'+ item.element;
+				- myWay += '.'+ item.element;
 
 			if tagName != 'img'
-				- item.attrs['data-way'] = ways;
+				- item.attrs['data-way'] = myWay;
 
 		if tagName === 'img' && item.attrs.src
 			- item.attrs.src = 'assets/images/example/'+item.attrs.src;
@@ -54,7 +56,7 @@ mixin example-block(items, ways, blockName, blockColor)
 					!=(item.content).join(' ')
 
 				if item.clild
-					+example-block(item.clild, ways, item.block, item.color)
+					+example-block(item.clild, myWay, item.block, item.color)
 
 		if item.element
 			if tagName === 'img'
@@ -68,4 +70,4 @@ mixin example-block(items, ways, blockName, blockColor)
 					if item.content.length
 						!=(item.content).join(' ')
 					if item.clild
-						+example-block(item.clild, ways, item.block, item.color)
+						+example-block(item.clild, myWay, item.block, item.color)

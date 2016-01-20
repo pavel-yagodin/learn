@@ -1,21 +1,27 @@
 include /blocks/section/section
 
-include /blocks/heading/heading
 include /blocks/title/title
 include /blocks/description/description
 
+include /blocks/flex/flex
+include /blocks/icon/icon
 include /blocks/round/round
 include /blocks/button/button
 
 
 +section._color_light
-	+heading
-		+e.title
-			+title(1) БЭМ
-		+e.description
-			+description._size_large Знать БЭМ-методологию обязан каждый уважающий себя верстальщик!
 
-	+round('yuranchik')._size_large._color_black
+	+title(1) Вёрстка с БЭМ
+
+	+title(2) Опыт CSSSR в применении методологии
+
+	+description._size_large
+		| БЭМ&nbsp;&mdash; это не&nbsp;только правила именования классов,
+		| как многие думают. Это способ мышления. Почти всё, что вас окружает
+		| можно выразить в&nbsp;терминах БЭМ методологии, будь&nbsp;то браузер,
+		| ноутбук или стол. Всё это можно считать блоком, БЭМ блоком!
+
+	+round('bem')._size_large
 
 	+button._color_aqua Я хочу знать больше!
 
