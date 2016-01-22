@@ -1,0 +1,25 @@
+
+mixin heading(data)
+	- console.log(this.block)
+	.heading&attributes(attributes)
+
+		block title
+
+		block
+
+mixin i(name)
+	- var blockName = name;
+	block
+
++heading
+
+	block title
+		.title1
+			| title1Text
+
+	+i('title')
+		.title2
+			| title2Text
+	+i('description')
+		.description
+			| descriptionText

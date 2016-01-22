@@ -1,7 +1,8 @@
 mixin example(data)
 	+b.example.js-selection-connect&attributes(attributes)
 		+e.frame
-			+example-block(data.json)
+			+e.align
+				+example-block(data.json)
 
 mixin example-block(items, ways, blockName, blockColor)
 	- inWay = ways;
@@ -55,13 +56,13 @@ mixin example-block(items, ways, blockName, blockColor)
 				if item.content.length
 					!=(item.content).join(' ')
 
-				if item.clild
-					+example-block(item.clild, myWay, item.block, item.color)
+				if item.child
+					+example-block(item.child, myWay, item.block, item.color)
 
 		if item.element
 			if tagName === 'img'
 				- var attrs = {};
-				- attrs['data-way'] = ways;
+				- attrs['data-way'] = myWay;
 				div(class=classesExample)&attributes(attrs)
 					- classes.push('js-selection-example')
 					+e(tagName)(class=classes)&attributes(item.attrs)
@@ -69,5 +70,5 @@ mixin example-block(items, ways, blockName, blockColor)
 				+e(tagName)(class=[classes, classesExample])&attributes(item.attrs)
 					if item.content.length
 						!=(item.content).join(' ')
-					if item.clild
-						+example-block(item.clild, myWay, item.block, item.color)
+					if item.child
+						+example-block(item.child, myWay, item.block, item.color)

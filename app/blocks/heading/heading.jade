@@ -1,6 +1,11 @@
-mixin heading(data)
+mixin heading()
+	+injected: block
 	+b.heading&attributes(attributes)
-		//- +e.title
-		//- +e.description
-		block
+		+each('title')
+			+e.title
+				+use('title')
 
+		+if('description')
+			+e.separator
+			+e.description
+				+use('description')

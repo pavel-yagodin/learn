@@ -38,23 +38,3 @@ gulp.task('templates', () => (
 		.pipe(rename({dirname: '.'}))
 		.pipe(gulp.dest('dist'))
 ));
-
-gulp.task('sections', () => (
-	gulp.src('app/pages/*/sections/*.jade')
-		.pipe(plumber({errorHandler: errorHandler('Error in \'templates\' task')}))
-		.pipe(cached('jade'))
-		.pipe(gulpif(global.watch, inheritance({basedir: 'app'})))
-		.pipe(filter(file => /app[\\\/]pages/.test(file.path)))
-		.pipe(jade(config))
-		.pipe(prettify({
-			brace_style: 'expand',
-			indent_size: 1,
-			indent_char: '\t',
-			indent_inner_html: true,
-			preserve_newlines: true
-		}))
-		.pipe(rename(function(filepath){
-			filepath.dirname = 'sections\\' + path.dirname(filepath.dirname);
-		}))
-		.pipe(gulp.dest('dist'))
-));

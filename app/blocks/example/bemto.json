@@ -1,7 +1,7 @@
 [{
 	"block": "review",
 	"color": "green",
-	"clild": [{
+	"child": [{
 		"tag": "img",
 		"element": "photo",
 		"attrs": {
@@ -9,7 +9,7 @@
 		}
 	}, {
 		"element": "quote",
-		"clild": [{
+		"child": [{
 			"element": "text",
 			"content": "Text quote",
 			"mods": {

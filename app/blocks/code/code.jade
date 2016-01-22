@@ -145,8 +145,8 @@ mixin code-line(items, lang, level, ways, blockName, blockColor)
 							+code-highlight(lang, 'content')!=html
 
 
-			if item.clild
-				+code-line(item.clild, lang, level + 1, myWay, item.block, item.color)
+			if item.child
+				+code-line(item.child, lang, level + 1, myWay, item.block, item.color)
 
 			if lang == 'html'
 				if ['img'].indexOf(item.tag) === -1

@@ -9,12 +9,14 @@ include /blocks/flex/flex
 include /blocks/example/example
 include /blocks/code/code
 
+- var test = ['BEM 2 Jade 2', 'BEM 2 Jade 3']
 
 +section._color_blue
 	+heading
-		+e.title
+		+inject('title')
 			+title BEM 2 Jade
-		+e.description
+
+		+inject('description')
 			+description
 				| Чтобы избежать дублирования класса блока для каждого элемента
 				| и&nbsp;модификатора рекомендуем практичный набор миксинов для

@@ -1,0 +1,97 @@
+[{
+	"block": "groups",
+	"color": "purple",
+	"child": [{
+		"element": "item",
+		"child": [{
+			"block": "users",
+			"color": "orange",
+			"child": [{
+				"element": "group",
+				"content": "Администраторы"
+			},{
+				"element": "list",
+				"child": [{
+					"element": "item",
+					"child": [{
+						"block": "user",
+						"color": "green",
+						"child": [{
+							"tag": "img",
+							"element": "photo",
+							"attrs": {
+								"src": "photo.jpg"
+							}
+						}, {
+							"element": "name",
+							"content": "Валерия Иванова"
+						}]
+					}]
+				}, {
+					"element": "item",
+					"child": [{
+						"block": "user",
+						"color": "green",
+						"child": [{
+							"tag": "img",
+							"element": "photo",
+							"attrs": {
+								"src": "photo-2.jpg"
+							}
+						}, {
+							"element": "name",
+							"content": "Диана Тимофеева"
+						}]
+					}]
+				}]
+			}]
+		}]
+	}, {
+		"element": "item",
+		"child": [{
+			"block": "users",
+			"color": "orange",
+			"child": [{
+				"element": "group",
+				"content": "Модераторы"
+			},{
+				"element": "list",
+				"child": [{
+					"element": "item",
+					"child": [{
+						"block": "user",
+						"color": "green",
+						"child": [{
+							"tag": "img",
+							"element": "photo",
+							"attrs": {
+								"src": "photo-3.jpg"
+							}
+						}, {
+							"element": "name",
+							"content": "Ольга Иванова"
+						}]
+					}]
+				}, {
+					"element": "item",
+					"child": [{
+						"block": "user",
+						"color": "green",
+						"child": [{
+							"tag": "img",
+							"element": "photo",
+							"attrs": {
+								"src": "photo-4.jpg"
+							}
+						}, {
+							"element": "name",
+							"content": "Инна Степанова"
+						}]
+					}]
+				}]
+			}]
+		}]
+	}]
+}]
+
+
